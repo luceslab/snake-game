@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐍 Snake Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body class="min-h-screen bg-base-300">
+    <div class="container mx-auto px-4 py-8">
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-primary mb-2">🐍 Snake Game</h1>
+            <p class="text-xl text-secondary">¡El clásico juego de la serpiente con un toque moderno!</p>
+        </div>
+        
+        <div class="flex justify-center mb-4">
+            <div class="stats shadow">
+                <div class="stat">
+                    <div class="stat-title">Puntuación</div>
+                    <div class="stat-value" id="score">0</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-title">Mejor Puntuación</div>
+                    <div class="stat-value" id="highScore">0</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-center mb-8">
+            <canvas id="gameCanvas" class="bg-base-200 rounded-lg shadow-xl"></canvas>
+        </div>
+
+        <div class="flex justify-center gap-4">
+            <button class="btn btn-primary" id="startBtn">Iniciar Juego</button>
+            <button class="btn btn-secondary" id="pauseBtn">Pausar</button>
+        </div>
+        
+        <div class="mt-8 text-center">
+            <div class="text-lg mb-2">Controles:</div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-md mx-auto">
+                <div class="card bg-base-200">
+                    <div class="card-body p-4">
+                        <h3 class="card-title text-sm">Movimiento</h3>
+                        <p>Flechas o WASD</p>
+                    </div>
+                </div>
+                <div class="card bg-base-200">
+                    <div class="card-body p-4">
+                        <h3 class="card-title text-sm">Pausar</h3>
+                        <p>Tecla P o botón</p>
+                    </div>
+                </div>
+                <div class="card bg-base-200">
+                    <div class="card-body p-4">
+                        <h3 class="card-title text-sm">Reiniciar</h3>
+                        <p>Botón Iniciar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer footer-center p-4 bg-base-200 text-base-content mt-8">
+        <div>
+            <p>Creado con ❤️ - Snake Game 2025</p>
+        </div>
+    </footer>
+    
+    <script src="/static/js/game.js"></script>
+</body>
+</html>
